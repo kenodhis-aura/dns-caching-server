@@ -1,0 +1,28 @@
+DNS Caching Server Validation
+=============================
+
+DNS Server:
+192.168.122.100
+
+Test 1: google.com
+Status: NOERROR
+Result: Successful resolution
+
+Test 2: redhat.com - First Query
+Status: NOERROR
+Query Time: 1981 ms
+
+Test 3: redhat.com - Second Query
+Status: NOERROR
+Query Time: 2 ms
+
+Observation:
+The second query was significantly faster, demonstrating
+that the response was served from the DNS cache.
+
+Test 4: DNSSEC
+Domain: dnssec-failed.org
+Status: SERVFAIL
+
+Observation:
+The DNS server rejected the invalid DNSSEC validation chain.
