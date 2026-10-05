@@ -169,14 +169,18 @@ BIND was verified to be listening on DNS port 53:
 
 ```bash
 ss -lunpt | grep ':53'
-```
+
+dig tool tests
+
 dig @192.168.122.100 google.com
 dig @192.168.122.100 redhat.com
 
 DNSSEC Validation was tested using:
 dig @192.168.122.100 dnssec-failed.org
+```
+## Skills learned
 
-##Skills Demonstrated
+
 - Linux system administration
 - DNS fundamentals
 - BIND 9
@@ -193,7 +197,10 @@ dig @192.168.122.100 dnssec-failed.org
 - systemd service management
 - Root-cause analysis
 - Technical documentation
-##Key Outcomes
+
+  
+## Keyoutcomes
+
 - Successfully deployed a BIND 9 recursive caching DNS server.
 - Restricted DNS access to a private lab network.
 - Restored DNS and HTTPS connectivity through firewall troubleshooting.
@@ -201,5 +208,7 @@ dig @192.168.122.100 dnssec-failed.org
 - Demonstrated DNS caching with a measured response-time reduction from approximately 1981 ms to 2 ms.
 - Validated DNSSEC behavior using a deliberately invalid DNSSEC domain.
 - Verified BIND service persistence after restart.
-##Conclusion
+
+## Conclusion
+
 This project provided practical experience deploying and troubleshooting a Linux-based DNS infrastructure service. It combined networking fundamentals, Linux administration, security controls, DNS troubleshooting, recursive resolution, caching, and service management in a reproducible virtualized lab environment.
